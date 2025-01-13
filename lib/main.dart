@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel/layouts/cardContainer.dart';
 import 'package:flutter_travel/widgets/button.dart';
-import 'package:flutter_travel/widgets/card.dart';
 
 void main() {
   runApp(App());
@@ -114,31 +113,6 @@ class App extends StatelessWidget {
                   height: 15,
                 ),
                 CardContainer(),
-                // CurrencyCard(
-                //   name: 'Euro',
-                //   code: 'EUR',
-                //   amount: '6 428',
-                //   icon: Icons.euro_rounded,
-                // ),
-                // Transform.translate(
-                //   offset: Offset(0, -25),
-                //   child: CurrencyCard(
-                //     name: 'Dollar',
-                //     code: 'USD',
-                //     amount: '55 622',
-                //     icon: Icons.attach_money_rounded,
-                //     isInverted: true,
-                //   ),
-                // ),
-                // Transform.translate(
-                //   offset: Offset(0, -50),
-                //   child: CurrencyCard(
-                //     name: 'Bitcoin',
-                //     code: 'BTC',
-                //     amount: '7 928',
-                //     icon: Icons.currency_bitcoin_rounded,
-                //   ),
-                // ),
               ],
             ),
           ),
