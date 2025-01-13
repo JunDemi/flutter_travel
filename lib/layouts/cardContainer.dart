@@ -36,7 +36,7 @@ class CardContainer extends StatelessWidget {
             icon: currencyData[i]['icon'],
             isInverted: i % 2 != 0 || false,
             y: i * -20,
-          )
+          ),
       ],
     );
   }
