@@ -7,10 +7,34 @@ void main() {
   runApp(App());
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
+  const App({super.key});
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  bool showTitle = true;
+
+  void showToggle() {
+    setState(() {
+      showTitle = !showTitle;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: TextTheme(
+          titleLarge: TextStyle(
+            color: Colors.white,
+            fontSize: 28,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
       home: Scaffold(
         backgroundColor: Color(0xFF181818),
         body: SingleChildScrollView(
@@ -24,20 +48,17 @@ class App extends StatelessWidget {
                 SizedBox(
                   height: 80,
                 ),
+                IconButton(
+                  onPressed: showToggle,
+                  icon: Icon(Icons.toggle_off_outlined),
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(
-                          'Hey, Selena',
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                          ),
-                        ),
+                        showTitle ? MyLargeTitle() : Text(''),
                         Text(
                           'Welcome back',
                           style: TextStyle(
@@ -119,6 +140,45 @@ class App extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+//타이틀 텍스트 테마 적용 테스트
+class MyLargeTitle extends StatefulWidget {
+  const MyLargeTitle({
+    super.key,
+  });
+
+  @override
+  State<MyLargeTitle> createState() => _MyLargeTitleState();
+}
+
+class _MyLargeTitleState extends State<MyLargeTitle> {
+  int count = 0;
+
+  //위젯 빌드 이전에 실행
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  //위젯이 사라지면 실행
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  //위젯 빌드
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      'Hey, Selena',
+      style: TextStyle(
+        fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
+        fontWeight: Theme.of(context).textTheme.titleLarge?.fontWeight,
+        color: Theme.of(context).textTheme.titleLarge?.color,
       ),
     );
   }
