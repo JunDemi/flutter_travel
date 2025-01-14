@@ -18,13 +18,13 @@ class Button extends StatelessWidget {
           color: bgColor, borderRadius: BorderRadius.circular(50)),
       child: Padding(
         padding: EdgeInsets.symmetric(
-          vertical: 20,
-          horizontal: 50,
+          vertical: 15,
+          horizontal: 45,
         ),
         child: Text(
           text,
           style: TextStyle(
-            fontSize: 16,
+            fontSize: 18,
             color: textColor,
           ),
         ),

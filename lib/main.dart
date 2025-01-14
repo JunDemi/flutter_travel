@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel/layouts/cardContainer.dart';
+import 'package:flutter_travel/layouts/stateWidget.dart';
 import 'package:flutter_travel/widgets/button.dart';
 
 void main() {
@@ -113,6 +114,7 @@ class App extends StatelessWidget {
                   height: 15,
                 ),
                 CardContainer(),
+                Statewidget(),
               ],
             ),
           ),
