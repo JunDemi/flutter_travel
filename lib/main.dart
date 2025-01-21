@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_travel/layouts/DateSelector.dart';
 import 'package:flutter_travel/layouts/ProfileHead.dart';
 import 'package:flutter_travel/layouts/TodoContainer.dart';
-import 'package:flutter_travel/layouts/cardContainer.dart';
 
 void main() {
   runApp(App());

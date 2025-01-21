@@ -1,0 +1,32 @@
+const List<Map<String, dynamic>> todo_data = [
+  {
+    'cardColor': 0XFFFCF771,
+    'title-top': 'DESIGN',
+    'title-bottom': 'MEETING',
+    'startTime-h': '11',
+    'startTime-m': '30',
+    'endTime-h': '12',
+    'endTime-m': '20',
+    'members': ['ALEX', 'HELENA', 'NANA'],
+  },
+  {
+    'cardColor': 0XFF946DC8,
+    'title-top': 'DAILY',
+    'title-bottom': 'PROJECT',
+    'startTime-h': '12',
+    'startTime-m': '35',
+    'endTime-h': '14',
+    'endTime-m': '10',
+    'members': ['ME', 'RICHARD', 'CIRY', '+4'],
+  },
+  {
+    'cardColor': 0XFFC7ED67,
+    'title-top': 'WEEKLY',
+    'title-bottom': 'PLANNING',
+    'startTime-h': '15',
+    'startTime-m': '00',
+    'endTime-h': '16',
+    'endTime-m': '30',
+    'members': ['DEN', 'NANA', 'MARK'],
+  },
+];
