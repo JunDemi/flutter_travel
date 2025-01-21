@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 
 class CurrencyCard extends StatelessWidget {
   final String name, code, amount;
-  final double y;
   final IconData icon;
   final bool isInverted;
 
   const CurrencyCard({
     super.key,
     required this.name,
-    required this.y,
     required this.code,
     required this.amount,
     required this.icon,
@@ -19,7 +17,7 @@ class CurrencyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Transform.translate(
-      offset: Offset(0, y),
+      offset: Offset(0, 0),
       child: Container(
         clipBehavior: Clip.hardEdge,
         decoration: BoxDecoration(
