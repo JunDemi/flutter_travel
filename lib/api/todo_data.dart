@@ -1,4 +1,4 @@
-const List<Map<String, dynamic>> todo_data = [
+const List<Map<String, dynamic>> todoData = [
   {
     'cardColor': 0XFFFCF771,
     'title-top': 'DESIGN',

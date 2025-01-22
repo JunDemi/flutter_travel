@@ -10,20 +10,20 @@ class TodoContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: List.generate(todo_data.length, (index) {
+      children: List.generate(todoData.length, (index) {
         return Padding(
             padding: EdgeInsets.symmetric(
               vertical: 5,
             ),
             child: todoCard(
-              cardColor: todo_data[index]['cardColor'],
-              titleTop: todo_data[index]['title-top'],
-              titleBottom: todo_data[index]['title-bottom'],
-              startTimeHour: todo_data[index]['startTime-h'],
-              startTimeMinute: todo_data[index]['startTime-m'],
-              endTimeHour: todo_data[index]['endTime-h'],
-              endTimeMinute: todo_data[index]['endTime-m'],
-              members: todo_data[index]['members'],
+              cardColor: todoData[index]['cardColor'],
+              titleTop: todoData[index]['title-top'],
+              titleBottom: todoData[index]['title-bottom'],
+              startTimeHour: todoData[index]['startTime-h'],
+              startTimeMinute: todoData[index]['startTime-m'],
+              endTimeHour: todoData[index]['endTime-h'],
+              endTimeMinute: todoData[index]['endTime-m'],
+              members: todoData[index]['members'],
             ));
       }),
     );
