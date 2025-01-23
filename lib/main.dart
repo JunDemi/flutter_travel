@@ -6,11 +6,13 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xFFE7626C),
+        scaffoldBackgroundColor: Color.fromARGB(255, 49, 174, 145),
         textTheme: TextTheme(
           titleLarge: TextStyle(
             color: Color(0xFF232B55),
@@ -18,7 +20,7 @@ class App extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        cardColor: Color(0xFFF4EDDB),
+        cardColor: Colors.white,
       ),
       home: HomeScreen(),
     );
