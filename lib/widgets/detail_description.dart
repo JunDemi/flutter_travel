@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel/models/webtoon_detail_model.dart';
+import 'package:flutter_travel/utils/get_decode_text.dart';
 
 class DetailDescription extends StatelessWidget {
   const DetailDescription({
@@ -19,7 +20,7 @@ class DetailDescription extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  snapshot.data!.about,
+                  getDecodeText(snapshot.data!.about),
                   style: TextStyle(
                     fontSize: 12,
                   ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel/models/webtoon_episode_model.dart';
+import 'package:flutter_travel/utils/get_decode_text.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class Episode extends StatelessWidget {
@@ -52,7 +53,7 @@ class Episode extends StatelessWidget {
               Flexible(
                 fit: FlexFit.loose,
                 child: Text(
-                  episode.title,
+                  getDecodeText(episode.title),
                   softWrap: false,
                   style: TextStyle(
                     color: Colors.green,

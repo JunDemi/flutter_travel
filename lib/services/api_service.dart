@@ -17,6 +17,7 @@ class ApiService {
     //인스턴스 변수 초기화
     List<Webtoon> webtoonInstances = [];
     final url = Uri.parse('$baseURL$today');
+    //http GET요청
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
