@@ -5,19 +5,19 @@ void main() {
   runApp(
     MaterialApp(
       theme: ThemeData(useMaterial3: true),
-      home: const WebViewApp(),
+      home: const App(),
     ),
   );
 }
 
-class WebViewApp extends StatefulWidget {
-  const WebViewApp({super.key});
+class App extends StatefulWidget {
+  const App({super.key});
 
   @override
-  State<WebViewApp> createState() => _AppState();
+  State<App> createState() => _AppState();
 }
 
-class _AppState extends State<WebViewApp> {
+class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
