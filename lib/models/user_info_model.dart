@@ -1,27 +1,38 @@
-class StoreAuthState {
-  final String accessToken;
-  final Map<String, dynamic> memberInfo;
-  final String refreshToken;
-
-  StoreAuthState({
-    required this.accessToken,
-    required this.memberInfo,
-    required this.refreshToken,
-  });
-
-  // JSON에서 StoreAuthState 객체를 생성하는 named 생성자
-  factory StoreAuthState.fromJson(Map<String, dynamic> json) {
-    return StoreAuthState(
-      accessToken: json['accessToken'] ?? '',
-      memberInfo: json['memberInfo'] ?? {},
-      refreshToken: json['refreshToken'] ?? '',
-    );
-  }
-}
-
 class UserInfoModel {
-  final StoreAuthState storeAuthState;
+  final Map<String, dynamic> memberInfo;
+  final String? accessToken;
+  final String? refreshToken;
   //named 생성자
   UserInfoModel.fromJson(Map<String, dynamic> parsedJson)
-      : storeAuthState = StoreAuthState.fromJson(parsedJson['state']);
+      : memberInfo = parsedJson['memberInfo'],
+        accessToken = parsedJson['accessToken'],
+        refreshToken = parsedJson['refreshToken'];
+        
+  Map<String, dynamic> toJson() => {
+        'memberInfo': memberInfo,
+        'accessToken': accessToken,
+        'refreshToken': refreshToken
+      };
 }
+
+// class MemberInfoModel {
+//   final int no;
+//   final String role;
+//   final String nickanme;
+//   final String email;
+//   final int status;
+//   final bool isOtp;
+//   final bool isUnread;
+//   final bool isAgent;
+
+//   //named 생성자
+//   MemberInfoModel.fromJson(Map<String, dynamic> parsedJson)
+//       : no = parsedJson['no'],
+//         role = parsedJson['role'],
+//         nickanme = parsedJson['nickanme'],
+//         email = parsedJson['email'],
+//         status = parsedJson['status'],
+//         isOtp = parsedJson['isOtp'],
+//         isUnread = parsedJson['isUnread'],
+//         isAgent = parsedJson['memberInfo'];
+// }
