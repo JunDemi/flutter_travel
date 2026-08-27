@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "495121793916",
+    "project_id": "practice-fcm-59446",
+    "storage_bucket": "practice-fcm-59446.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495121793916:android:b746ca9b7c1abb650e9af9",
+        "android_client_info": {
+          "package_name": "com.example.otc_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM4ktZkIAU48sfsf-412QBs7T_QasK7iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
